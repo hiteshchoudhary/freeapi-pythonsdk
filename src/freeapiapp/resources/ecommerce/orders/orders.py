@@ -63,7 +63,7 @@ class OrdersResource(SyncAPIResource):
         This property can be used as a prefix for any HTTP method call to return the
         the raw response object instead of the parsed content.
 
-        For more information, see https://www.github.com/stainless-sdks/freeapiapp-python#accessing-raw-response-data-eg-headers
+        For more information, see https://www.github.com/hiteshchoudhary/freeapi-pythonsdk#accessing-raw-response-data-eg-headers
         """
         return OrdersResourceWithRawResponse(self)
 
@@ -72,7 +72,7 @@ class OrdersResource(SyncAPIResource):
         """
         An alternative to `.with_raw_response` that doesn't eagerly read the response body.
 
-        For more information, see https://www.github.com/stainless-sdks/freeapiapp-python#with_streaming_response
+        For more information, see https://www.github.com/hiteshchoudhary/freeapi-pythonsdk#with_streaming_response
         """
         return OrdersResourceWithStreamingResponse(self)
 
@@ -133,7 +133,7 @@ class AsyncOrdersResource(AsyncAPIResource):
         This property can be used as a prefix for any HTTP method call to return the
         the raw response object instead of the parsed content.
 
-        For more information, see https://www.github.com/stainless-sdks/freeapiapp-python#accessing-raw-response-data-eg-headers
+        For more information, see https://www.github.com/hiteshchoudhary/freeapi-pythonsdk#accessing-raw-response-data-eg-headers
         """
         return AsyncOrdersResourceWithRawResponse(self)
 
@@ -142,7 +142,7 @@ class AsyncOrdersResource(AsyncAPIResource):
         """
         An alternative to `.with_raw_response` that doesn't eagerly read the response body.
 
-        For more information, see https://www.github.com/stainless-sdks/freeapiapp-python#with_streaming_response
+        For more information, see https://www.github.com/hiteshchoudhary/freeapi-pythonsdk#with_streaming_response
         """
         return AsyncOrdersResourceWithStreamingResponse(self)
 
