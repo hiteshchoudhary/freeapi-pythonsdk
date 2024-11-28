@@ -1,6 +1,6 @@
 [project]
 name = "freeapiapp"
-version = "0.0.1-alpha.0"
+version = "0.0.1-alpha.1"
 description = "The official Python library for the freeapiapp API"
 dynamic = ["readme"]
 license = "Apache-2.0"
@@ -14,13 +14,11 @@ dependencies = [
     "anyio>=3.5.0, <5",
     "distro>=1.7.0, <2",
     "sniffio",
-    "cached-property; python_version < '3.8'",
 ]
-requires-python = ">= 3.7"
+requires-python = ">= 3.8"
 classifiers = [
   "Typing :: Typed",
   "Intended Audience :: Developers",
-  "Programming Language :: Python :: 3.7",
   "Programming Language :: Python :: 3.8",
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
@@ -36,8 +34,8 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/stainless-sdks/freeapiapp-python"
-Repository = "https://github.com/stainless-sdks/freeapiapp-python"
+Homepage = "https://github.com/hiteshchoudhary/freeapi-pythonsdk"
+Repository = "https://github.com/hiteshchoudhary/freeapi-pythonsdk"
 
 
 
@@ -56,6 +54,7 @@ dev-dependencies = [
     "dirty-equals>=0.6.0",
     "importlib-metadata>=6.7.0",
     "rich>=13.7.1",
+    "nest_asyncio==1.6.0"
 ]
 
 [tool.rye.scripts]
@@ -123,7 +122,7 @@ path = "README.md"
 [[tool.hatch.metadata.hooks.fancy-pypi-readme.substitutions]]
 # replace relative links with absolute links
 pattern = '\[(.+?)\]\(((?!https?://)\S+?)\)'
-replacement = '[\1](https://github.com/stainless-sdks/freeapiapp-python/tree/main/\g<2>)'
+replacement = '[\1](https://github.com/hiteshchoudhary/freeapi-pythonsdk/tree/main/\g<2>)'
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
@@ -139,7 +138,7 @@ filterwarnings = [
 # there are a couple of flags that are still disabled by
 # default in strict mode as they are experimental and niche.
 typeCheckingMode = "strict"
-pythonVersion = "3.7"
+pythonVersion = "3.8"
 
 exclude = [
     "_dev",

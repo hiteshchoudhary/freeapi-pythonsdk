@@ -2,7 +2,7 @@
 
 [![PyPI version](https://img.shields.io/pypi/v/freeapiapp.svg)](https://pypi.org/project/freeapiapp/)
 
-The Freeapiapp Python library provides convenient access to the Freeapiapp REST API from any Python 3.7+
+The Freeapiapp Python library provides convenient access to the Freeapiapp REST API from any Python 3.8+
 application. The library includes type definitions for all request params and response fields,
 and offers both synchronous and asynchronous clients powered by [httpx](https://github.com/encode/httpx).
 
@@ -15,12 +15,9 @@ The REST API documentation can be found on [docs.freeapiapp.com](https://docs.fr
 ## Installation
 
 ```sh
-# install from this staging repo
-pip install git+ssh://git@github.com/stainless-sdks/freeapiapp-python.git
+# install from PyPI
+pip install --pre freeapiapp
 ```
-
-> [!NOTE]
-> Once this package is [published to PyPI](https://app.stainlessapi.com/docs/guides/publish), this will become: `pip install --pre freeapiapp`
 
 ## Usage
 
@@ -160,11 +157,13 @@ Note that requests that time out are [retried twice by default](#retries).
 
 We use the standard library [`logging`](https://docs.python.org/3/library/logging.html) module.
 
-You can enable logging by setting the environment variable `FREEAPIAPP_LOG` to `debug`.
+You can enable logging by setting the environment variable `FREEAPIAPP_LOG` to `info`.
 
 ```shell
-$ export FREEAPIAPP_LOG=debug
+$ export FREEAPIAPP_LOG=info
 ```
+
+Or to `debug` for more verbose logging.
 
 ### How to tell whether `None` means `null` or missing
 
@@ -193,9 +192,9 @@ authentication = response.parse()  # get the object that `authentications.regist
 print(authentication.data)
 ```
 
-These methods return an [`APIResponse`](https://github.com/stainless-sdks/freeapiapp-python/tree/main/src/freeapiapp/_response.py) object.
+These methods return an [`APIResponse`](https://github.com/hiteshchoudhary/freeapi-pythonsdk/tree/main/src/freeapiapp/_response.py) object.
 
-The async client returns an [`AsyncAPIResponse`](https://github.com/stainless-sdks/freeapiapp-python/tree/main/src/freeapiapp/_response.py) with the same structure, the only difference being `await`able methods for reading the response content.
+The async client returns an [`AsyncAPIResponse`](https://github.com/hiteshchoudhary/freeapi-pythonsdk/tree/main/src/freeapiapp/_response.py) with the same structure, the only difference being `await`able methods for reading the response content.
 
 #### `.with_streaming_response`
 
@@ -289,7 +288,7 @@ This package generally follows [SemVer](https://semver.org/spec/v2.0.0.html) con
 
 We take backwards-compatibility seriously and work hard to ensure you can rely on a smooth upgrade experience.
 
-We are keen for your feedback; please open an [issue](https://www.github.com/stainless-sdks/freeapiapp-python/issues) with questions, bugs, or suggestions.
+We are keen for your feedback; please open an [issue](https://www.github.com/hiteshchoudhary/freeapi-pythonsdk/issues) with questions, bugs, or suggestions.
 
 ### Determining the installed version
 
@@ -304,7 +303,7 @@ print(freeapiapp.__version__)
 
 ## Requirements
 
-Python 3.7 or higher.
+Python 3.8 or higher.
 
 ## Contributing
 
